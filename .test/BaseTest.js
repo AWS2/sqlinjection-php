@@ -84,6 +84,13 @@ class BaseTest {
                 .setFirefoxOptions(firefoxOptions)
                 .build();
         }
+
+        // Configurar timeouts
+        await this.driver.manage().setTimeouts({
+          implicit: 10000, // 10 segons per trobar elements
+          pageLoad: 20000, // 15 segons per carregar pàgines
+          script: 30000    // 30 segons per scripts
+        });
     }
 
     runServer( command, options ) {

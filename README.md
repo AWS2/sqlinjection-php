@@ -6,6 +6,11 @@ Disposeu de més informació a https://bytes.cat/sql_injection
 
 ## Instal·lació
 
+Instal·la Docker:
+
+    $ sudo apt update
+    $ sudo apt install docker.io docker-compose-v2
+
 Posa en marxa el servidor amb (cal tenir instal·lat `Docker.io`):
 
     $ ./run.sh
