@@ -13,7 +13,7 @@ services:
       DB_PASSWORD: examplepass
 
   db:
-    image: mysql:5.7
+    image: mariadb:12-ubi
     environment:
       MYSQL_DATABASE: sqlidb
       MYSQL_USER: exampleuser
