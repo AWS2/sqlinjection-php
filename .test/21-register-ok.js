@@ -13,7 +13,7 @@ class MyTest extends BaseTest
         //////////////////////////////////////////////////////
 
         // creem user amb credencials aleatòries
-        const usuari = Math.random().toString(36).slice(2,12);;
+        const user = Math.random().toString(36).slice(2,12);;
         const pass = Math.random().toString(36).slice(2,12);;
         // esperar a que el servidor es posi online
         await this.driver.sleep(6000);
@@ -38,7 +38,7 @@ class MyTest extends BaseTest
         await this.driver.sleep(1000);
         // comprovem que el missatge de login és CORRECTE
         resultText = await this.driver.findElement(By.xpath("//div[contains(@class,'user')]")).getText();
-        assertMessage = `Hola ${usuari} (user).`;
+        assertMessage = `Hola ${user} (user).`;
         assert(resultText==assertMessage,`ERROR TEST: l'usuari ${user}/${pass} hauria d'entrar amb el missatge '`+assertMessage+`' en un div.user`);
         console.log(assertMessage);
         
